@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div>
+    <div id="content">
+        <div class="cont">
             <div>
                 <div>得分：{{ scores }}</div>
                 <div>进度：{{ progress }} / {{ aaq.length }}</div>
@@ -64,5 +64,16 @@
 </script>
 
 <style scoped lang="stylus">
-
+#content
+    width 100%
+    height 100%
+    background-image url('../common/images/loignBg.jpg')
+    background-size cover
+    .cont
+        padding-top 0.6rem
+        div
+            font-size 0.3rem
+            padding-top 0.3rem
+            h3
+                font-size 0.5rem  
 </style>

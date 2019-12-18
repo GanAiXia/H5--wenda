@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="(son, index) in item.answer" :key="index" @click="countScore(son.isAnswer)">
+        <div class="item" v-for="(son, index) in item.answer" :key="index" @click="countScore(son.isAnswer)">
             {{ index+1 }}、{{ son.answer }}
         </div>
     </div>
@@ -25,5 +25,8 @@
 </script>
 
 <style lang="stylus" scoped>
-
+.item
+    font-size 0.3rem
+    padding-bottom 0.15rem
+    text-indent 0.3rem
 </style>
