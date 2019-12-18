@@ -1,6 +1,7 @@
 <template>
     <div>
-        <router-view></router-view>
+        <h2>这是封面页</h2>
+        <router-link :to="{name: 'content'}">开始问答</router-link>
     </div>
 </template>
 
