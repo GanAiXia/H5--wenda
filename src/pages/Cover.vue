@@ -1,12 +1,16 @@
 <template>
     <div class="cover">
-        <router-link :to="{name: 'content'}"><a class="start">开始问答</a></router-link>
+        <a class="start" @click="goToQA">立即答题</a>
     </div>
 </template>
 
 <script>
     export default {
-        
+        methods: {
+            goToQA(){
+                this.$router.replace('content')
+            }
+        },
     }
 </script>
 
@@ -26,9 +30,9 @@
         color yellow
     .start
         position absolute
-        bottom 1rem
+        top 10.4rem
         left 2.5rem
-        font-size 0.4rem
+        font-size 0.32rem
         text-align center 
         color #fff
         display: block;
