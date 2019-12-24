@@ -41,7 +41,7 @@
            nextQuest(fatherIndex, isAnswer){
                const {aaq, scores, progress} = this
                 let score = 0
-
+                this.canClick = false
                 setTimeout(() => {
                     if (isAnswer) {
                     score = aaq[fatherIndex].score
@@ -54,14 +54,14 @@
                             this.aaq[fatherIndex].isShow = false
                             this.aaq[fatherIndex + 1].isShow = true
                             this.progress = progress + 1 
-        
+                            this.canClick = true
                     }else{
                         this.canClick = false
                         setTimeout(() => {
                                 this.alertShow = true                      
                         }, 100);
                     }                    
-                }, 500);
+                }, 1000);
                 
 
   

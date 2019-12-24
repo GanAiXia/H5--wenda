@@ -21,20 +21,19 @@
         },
         methods: {
          countScore(Answer, index){
-             if (Answer) {
-                this.right = 'right'
-                this.indexClass = index
-             }else{
-                this.right = 'wrong'
-                this.indexClass = index
-             }
 
              if (this.canClick) {
+                if (Answer) {
+                    this.right = 'right'
+                    this.indexClass = index
+                }else{
+                    this.right = 'wrong'
+                    this.indexClass = index
+                }
+
                 const {fatherIndex, nextQuest} = this
                 const isAnswer = Answer
                 nextQuest(fatherIndex, isAnswer)
-             }else{
-                alert("请勿重复提交！")
              }
 
          }   
