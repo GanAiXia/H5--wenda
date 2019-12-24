@@ -1,6 +1,5 @@
 <template>
     <div class="cover">
-        <h2>这是封面页</h2>
         <router-link :to="{name: 'content'}"><a class="start">开始问答</a></router-link>
     </div>
 </template>
@@ -27,10 +26,16 @@
         color yellow
     .start
         position absolute
-        bottom 2.5rem
-        left 2.6rem
-        font-size 0.3rem
+        bottom 1rem
+        left 2.5rem
+        font-size 0.4rem
         text-align center 
-        color #fff   
+        color #fff
+        display: block;
+        width: 2.4rem;
+        line-height: 0.6rem;
+        height: 0.6rem;
+        border-radius: 0.3rem;
+        background: #2c3ea0;
 
 </style>
