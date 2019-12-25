@@ -30,7 +30,7 @@
         color yellow
     .start
         position absolute
-        top 10.4rem
+        top 10.9rem
         left 2.5rem
         font-size 0.32rem
         text-align center 

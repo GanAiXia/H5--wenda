@@ -24,11 +24,16 @@
        data () {
            return {
                aaq: [
-                   {question: '猜猜这位小姐姐做了什么面部抗衰项目？', answer: [{answer:'超皮秒嫩肤祛斑',isAnswer: false}, {answer:'蜜糖花瓣唇',isAnswer: false}, {answer:'玻尿酸填充太阳穴',isAnswer: true}], score: 20, isShow: true},
-                   {question: '猜猜这位小姐姐脸部做了哪些抗衰和皮肤保养项目？', answer: [{answer:'热玛吉/水光针/线雕/提拉素',isAnswer: true}, {answer:'面部埋线提升',isAnswer: false}, {answer:'水光针',isAnswer: false}], score: 20, isShow: false},
-                   {question: '猜猜这位小姐姐做了什么面部抗衰项目？', answer: [{answer:'射频美肤',isAnswer: false}, {answer:'埋线提升',isAnswer: true}, {answer:'瘦脸针',isAnswer: false}], score: 20, isShow: false},
-                   {question: '猜猜这位小姐姐做了哪些项目？', answer: [{answer:'线雕/童颜针',isAnswer: true}, {answer:'水光嫩肤',isAnswer: false}, {answer:'面部吸脂',isAnswer: false}], score: 20, isShow: false},
-                   {question: '猜猜这位小姐姐面部做了什么美肤项目', answer: [{answer:'皮秒祛斑',isAnswer: true}, {answer:'激光点痣',isAnswer: false}, {answer:'菲洛嘉水光',isAnswer: false}], score: 20, isShow: false}
+                   {question: 'No.3图中的小姐姐，是通过什么项目变成现在的样子？', answer: [{answer:'线雕提升',isAnswer: false}, {answer:'玻尿酸填充',isAnswer: false}, {answer:'玻尿酸填充+线雕提升',isAnswer: true}], score: 10, isShow: true},
+                   {question: 'No.5图中的小姐姐什么问题得到明显改善？', answer: [{answer:'泪沟+黑眼圈',isAnswer: true}, {answer:'泪沟',isAnswer: false}, {answer:'黑眼圈',isAnswer: false}], score: 10, isShow: false},
+                   {question: 'No.7图中的小姐姐是通过什么项目改变了脸型？', answer: [{answer:'线雕提升+玻尿酸填充',isAnswer: false}, {answer:'线雕提升',isAnswer: true}, {answer:'玻尿酸填充',isAnswer: false}], score: 10, isShow: false},
+                   {question: 'No.11图中的小姐姐哪个部位发生了明显变化？', answer: [{answer:'法令纹',isAnswer: false}, {answer:'下颌缘',isAnswer: true}, {answer:'鼻子',isAnswer: false}], score: 10, isShow: false},
+                   {question: 'No.13图中的小姐姐是如何get到下颌缘线的？', answer: [{answer:'线雕结合脂肪管理',isAnswer: true}, {answer:'瘦脸针',isAnswer: false}, {answer:'线雕',isAnswer: false}], score: 10, isShow: false},                 
+                   {question: 'No.35图中的小姐姐做了什么面部抗衰项目？', answer: [{answer:'超皮秒嫩肤祛斑',isAnswer: false}, {answer:'蜜糖花瓣唇',isAnswer: false}, {answer:'玻尿酸填充太阳穴',isAnswer: true}], score: 10, isShow: false},
+                   {question: 'No.37图中的小姐姐脸部做了哪些抗衰和皮肤保养项目？', answer: [{answer:'热玛吉/水光针/线雕/提拉素',isAnswer: true}, {answer:'面部埋线提升',isAnswer: false}, {answer:'水光针',isAnswer: false}], score: 10, isShow: false},
+                   {question: 'No.39图中的小姐姐做了什么面部抗衰项目？', answer: [{answer:'射频美肤',isAnswer: false}, {answer:'埋线提升',isAnswer: true}, {answer:'瘦脸针',isAnswer: false}], score: 10, isShow: false},
+                   {question: 'No.34图中的小姐姐做了哪些项目？', answer: [{answer:'线雕/童颜针',isAnswer: true}, {answer:'水光嫩肤',isAnswer: false}, {answer:'面部吸脂',isAnswer: false}], score: 10, isShow: false},
+                   {question: 'No.36图中的小姐姐面部做了什么美肤项目', answer: [{answer:'皮秒祛斑',isAnswer: true}, {answer:'激光点痣',isAnswer: false}, {answer:'菲洛嘉水光',isAnswer: false}], score: 10, isShow: false}
                ],
                scores: 0,
                progress: 1,
@@ -64,7 +69,7 @@
                                 this.alertShow = true                      
                         }, 100);
                     }                    
-                }, 1000);
+                }, 500);
                 
 
   
