@@ -1,0 +1,1 @@
+export const SET_SEAT = 'set_seat'

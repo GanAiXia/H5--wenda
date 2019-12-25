@@ -1,13 +1,21 @@
 <template>
     <div class="cover">
+        <input type="text" v-model="seat" class="seat" placeholder="请输入座位号">
         <a class="start" @click="goToQA">立即答题</a>
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                seat: ''
+            }
+        },
         methods: {
             goToQA(){
+                const seat = this.seat.trim()
+                this.$store.dispatch('setSeat', seat)
                 this.$router.replace('content')
             }
         },
@@ -30,7 +38,7 @@
         color yellow
     .start
         position absolute
-        top 10.9rem
+        top 11.3rem
         left 2.5rem
         font-size 0.32rem
         text-align center 
@@ -41,5 +49,12 @@
         height: 0.6rem;
         border-radius: 0.3rem;
         background: #2c3ea0;
-
+    .seat
+        position absolute
+        top 10.4rem
+        left 2.5rem
+        height 0.6rem
+        width 2.4rem
+        font-size 0.32rem
+        text-align center
 </style>

@@ -6,6 +6,7 @@
         <span></span>
       </div>
       <p class="tip_text">答题结束，{{scores}}分</p>
+      <!-- <p class="tip_text">您的号码是：{{seat}}</p> -->
       <div class="confrim" @click="closeTip">返回首页</div>
     </section>
   </div>
@@ -14,7 +15,8 @@
 <script>
   export default {
     props: {
-      scores: Number
+      scores: Number,
+      // seat: String
     },
 
     methods: {
