@@ -7,6 +7,9 @@
             </div>
             <div v-for="(item, index) in aaq" :key="index" v-show="item.isShow" >
                 <h4>{{ item.question }}</h4>
+                <div class="imgpersom">
+                    <img :src="'/static/images/' + (index+1) + '.jpg'">
+                </div>
                 <ItemContent :item = "item" :fatherIndex="index" :nextQuest="nextQuest" :canClick="canClick"></ItemContent>
             </div>            
         </div>
@@ -85,6 +88,7 @@
         div
             font-size 0.3rem
             padding-top 0.3rem
+            overflow hidden
             h3
                 font-size 0.5rem
                 text-align center
@@ -94,4 +98,9 @@
                 margin 0 auto
                 line-height 0.45rem
                 font-size 0.3rem
+            .imgpersom
+                width 3rem
+                margin 0 auto
+                img
+                    width 100%    
 </style>
