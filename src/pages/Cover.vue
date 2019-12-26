@@ -1,6 +1,6 @@
 <template>
     <div class="cover">
-        <input type="text" v-model="seat" class="seat" placeholder="请输入座位号">
+        <!-- <input type="text" v-model="seat" class="seat" placeholder="请输入座位号"> -->
         <a class="start" @click="goToQA">立即答题</a>
     </div>
 </template>
@@ -38,7 +38,7 @@
         color yellow
     .start
         position absolute
-        top 11.3rem
+        top 10.8rem
         left 2.5rem
         font-size 0.32rem
         text-align center 

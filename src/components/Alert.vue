@@ -2,11 +2,12 @@
   <div class="alert_container">
     <section class="tip_text_container">
       <div class="tip_icon">
+        <img src="../common/images/bsl10th.jpg">
         <span></span>
         <span></span>
       </div>
-      <p class="tip_text">答题结束，{{scores}}分</p>
-      <!-- <p class="tip_text">您的号码是：{{seat}}</p> -->
+      <p class="tip_text">您的成绩为：{{scores}}分</p>
+      <p class="tip_text tip_text2">* 凭此界面或截图，前往before after展台盖章，更有机会领取神秘奖品</p>
       <div class="confrim" @click="closeTip">返回首页</div>
     </section>
   </div>
@@ -53,9 +54,9 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-top: -90px
-      margin-left: -110px
-      width: 60%
+      margin-top: -3.9rem
+      margin-left: -3.3rem
+      width: 6.6rem
       animation: tipMove .4s;
       background-color: rgba(255, 255, 255, 1);
       border: 1px;
@@ -66,10 +67,10 @@
       flex-direction: column;
       border-radius: 5px
       .tip_icon
-        width: 55px
-        height: 55px
-        border: 2px solid #f8cb86;
-        border-radius: 50%;
+        width: 5.6rem
+        height: 3.3rem
+        padding-top 0.1rem
+        padding-bottom 0.3rem
         font-size 20px
         display: flex;
         justify-content: center;
@@ -86,13 +87,20 @@
           border-radius: 50%;
           margin-top: 2px
           background-color #f8cb86
+        img
+          width 100%  
       .tip_text
-        font-size 14px
-        color #333
-        line-height 20px
+        font-size 0.45rem
+        color #735F3F
+        line-height 0.45rem
         text-align center
         margin-top 10px
-        padding 0 5px
+        padding 3px 8px
+      .tip_text2
+        font-size 0.25rem
+        line-height 0.35rem
+        text-align justify
+        color #333
       .confrim
         font-size 18px
         font-weight bold
