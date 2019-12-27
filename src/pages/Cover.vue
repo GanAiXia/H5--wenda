@@ -1,23 +1,45 @@
 <template>
-    <div class="cover">
+<div class="cover">
+    <div>
         <!-- <input type="text" v-model="seat" class="seat" placeholder="请输入座位号"> -->
-        <a class="start" @click="goToQA">立即答题</a>
+        <a class="start" @click="goToQA">{{wendascore ? '获取分数' : '立即答题'}}</a>
     </div>
+    <Alert v-show="alertShow" :scores="wendascore"></Alert>
+</div>   
 </template>
 
 <script>
+    import Alert from '../components/Alert'
     export default {
+        components: {
+           Alert 
+        },
         data() {
             return {
-                seat: ''
+                seat: '',
+                wendascore: 0,
+                alertShow: false
+            }
+        },
+        mounted() {
+            const res = localStorage.getItem('wendascore')
+            if (res) {
+                this.wendascore = res                
             }
         },
         methods: {
+
             goToQA(){
                 const seat = this.seat.trim()
                 this.$store.dispatch('setSeat', seat)
-                this.$router.replace('content')
-            }
+                if (!this.wendascore) {
+                    this.$router.replace('content')                
+                }else{
+                    this.alertShow = true
+                }
+                
+            }             
+
         },
     }
 </script>

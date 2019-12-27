@@ -7,7 +7,7 @@
         <span></span>
       </div>
       <p class="tip_text">您的成绩为：{{scores}}分</p>
-      <p class="tip_text tip_text2">* 凭此界面或截图，前往before after展台盖章，更有机会领取神秘奖品</p>
+      <p class="tip_text tip_text2">* 凭此界面或截图，前往before~after大探秘展台盖章，更有机会领取神秘奖品</p>
       <div class="confrim" @click="closeTip">返回首页</div>
     </section>
   </div>
@@ -15,15 +15,18 @@
 
 <script>
   export default {
-    props: {
-      scores: Number,
-      // seat: String
-    },
+    props: ['scores'],
 
     methods: {
       closeTip() {
         // 分发自定义事件(事件名: closeTip)
-        this.$router.replace('/cover')
+        localStorage.setItem('wendascore', this.scores)
+        const path = this.$route.path
+        if (path === '/cover') {
+          window.location.reload();
+        }else{
+          this.$router.replace('/cover')
+        }
       }
     }
   }
